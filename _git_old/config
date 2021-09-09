@@ -1,0 +1,30 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+	ignorecase = true
+	precomposeunicode = true
+[submodule]
+	active = .
+[remote "origin"]
+	url = https://github.com/21e8/metaplex.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "fix-typo"]
+	remote = origin
+	merge = refs/heads/fix-typo
+[branch "apeshit"]
+	remote = origin
+	merge = refs/heads/apeshit
+[branch "test"]
+	remote = origin
+	merge = refs/heads/test
+[branch "sync-with-base"]
+	remote = origin
+	merge = refs/heads/sync-with-base
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
+[remote "fork"]
+	url = https://github.com/metaplex-foundation/metaplex
+	fetch = +refs/heads/*:refs/remotes/fork/*

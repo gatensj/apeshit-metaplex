@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 Alice <alize_in_cryptoland@pm.me> 1629814881 +0200	branch: Created from master
+194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 fe621876531863015b11f69361f5d2a6769bdaaa Alice <40480041+21e8@users.noreply.github.com> 1629815102 +0200	commit: Add apeshit changes
+fe621876531863015b11f69361f5d2a6769bdaaa 29f92aed475db2e741bed0b6f3c6717560613640 Alice <40480041+21e8@users.noreply.github.com> 1629815221 +0200	commit: Update index.tsx
+29f92aed475db2e741bed0b6f3c6717560613640 9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 Alice <40480041+21e8@users.noreply.github.com> 1629824317 +0200	commit: Fix metadata
+9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Alice <40480041+21e8@users.noreply.github.com> 1629824651 +0200	merge master: Fast-forward

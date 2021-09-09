@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 bbb05b7e68d26ba17027a1035bb1252c99ad56c2 Alize <alize_in_cryptoland@protonmail.com> 1626866979 +0200	branch: Created from HEAD
+bbb05b7e68d26ba17027a1035bb1252c99ad56c2 1475371a2de2d6971b5a8884d7b1f3b02f8f3137 Alize <alize_in_cryptoland@protonmail.com> 1626867014 +0200	commit: Make app run in right repo, update due to deps
+1475371a2de2d6971b5a8884d7b1f3b02f8f3137 921fdab20d03a5d1e48030d0e840471083fabf43 mchl18 <40480041+21e8@users.noreply.github.com> 1627319785 +0200	commit: WIP
+921fdab20d03a5d1e48030d0e840471083fabf43 a22b72ccaffc8bc011b7452e924a8009e3962e30 mchl18 <40480041+21e8@users.noreply.github.com> 1628601157 +0200	rebase (continue) (finish): refs/heads/create-proper-ass-fork onto 0fc9458163462e41aa4cdbdc924e9b1666f716d4
+a22b72ccaffc8bc011b7452e924a8009e3962e30 17a73d4bd72fd8416812584af79862b49e9bea55 mchl18 <40480041+21e8@users.noreply.github.com> 1628601474 +0200	commit: add some changes
+17a73d4bd72fd8416812584af79862b49e9bea55 eff2f95c2e959f919566480daeb778f608370568 mchl18 <40480041+21e8@users.noreply.github.com> 1628605661 +0200	commit: Changes
+eff2f95c2e959f919566480daeb778f608370568 70e1cdae1fc7e10452ed5fd6b076472e6e6100c8 mchl18 <40480041+21e8@users.noreply.github.com> 1629811127 +0200	commit: Fixes
+70e1cdae1fc7e10452ed5fd6b076472e6e6100c8 8377506a1f307c09ef23d1a5e17c079a759fda82 Alice <alize_in_cryptoland@pm.me> 1629814740 +0200	commit (merge): Merge branch 'master' into create-proper-ass-fork
