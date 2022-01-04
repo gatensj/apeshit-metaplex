@@ -1,41 +1,38 @@
-use {
-    crate::{
-        deprecated_processor::{
-            process_deprecated_create_master_edition, process_deprecated_create_reservation_list,
-            process_deprecated_mint_new_edition_from_master_edition_via_printing_token,
-            process_deprecated_mint_printing_tokens,
-            process_deprecated_mint_printing_tokens_via_token,
-            process_deprecated_set_reservation_list,
-        },
-        error::MetadataError,
-        instruction::MetadataInstruction,
-        state::{
-            Data, Key, MasterEditionV1, MasterEditionV2, Metadata, EDITION, MAX_MASTER_EDITION_LEN,
-            PREFIX,
-        },
-        utils::{
-            assert_data_valid, assert_derivation, assert_initialized,
-            assert_mint_authority_matches_mint, assert_owned_by, assert_signer,
-            assert_token_program_matches_package, assert_update_authority_is_correct,
-            create_or_allocate_account_raw, get_owner_from_token_account,
-            process_create_metadata_accounts_logic,
-            process_mint_new_edition_from_master_edition_via_token_logic, transfer_mint_authority,
-            puff_out_data_fields,
-            CreateMetadataAccountsLogicArgs, MintNewEditionFromMasterEditionViaTokenLogicArgs,
-        },
+use crate::{
+    deprecated_processor::{
+        process_deprecated_create_master_edition, process_deprecated_create_reservation_list,
+        process_deprecated_mint_new_edition_from_master_edition_via_printing_token,
+        process_deprecated_mint_printing_tokens, process_deprecated_mint_printing_tokens_via_token,
+        process_deprecated_set_reservation_list,
     },
-    arrayref::array_ref,
-    borsh::{BorshDeserialize, BorshSerialize},
-    solana_program::{
-        account_info::{next_account_info, AccountInfo},
-        entrypoint::ProgramResult,
-        msg,
-        program_error::ProgramError,
-        pubkey::Pubkey,
+    error::MetadataError,
+    instruction::MetadataInstruction,
+    state::{
+        Data, Key, MasterEditionV1, MasterEditionV2, Metadata, EDITION, MAX_MASTER_EDITION_LEN,
+        PREFIX,
     },
-    spl_token::state::{Account, Mint},
-    spl_token_vault::{error::VaultError, state::VaultState},
+    utils::{
+        assert_data_valid, assert_derivation, assert_initialized,
+        assert_mint_authority_matches_mint, assert_owned_by, assert_signer,
+        assert_token_program_matches_package, assert_update_authority_is_correct,
+        create_or_allocate_account_raw, get_owner_from_token_account,
+        process_create_metadata_accounts_logic,
+        process_mint_new_edition_from_master_edition_via_token_logic, puff_out_data_fields,
+        transfer_mint_authority, CreateMetadataAccountsLogicArgs,
+        MintNewEditionFromMasterEditionViaTokenLogicArgs,
+    },
 };
+use arrayref::array_ref;
+use borsh::{BorshDeserialize, BorshSerialize};
+use metaplex_token_vault::{error::VaultError, state::VaultState};
+use solana_program::{
+    account_info::{next_account_info, AccountInfo},
+    entrypoint::ProgramResult,
+    msg,
+    program_error::ProgramError,
+    pubkey::Pubkey,
+};
+use spl_token::state::{Account, Mint};
 
 pub fn process_instruction<'a>(
     program_id: &'a Pubkey,
@@ -132,10 +129,7 @@ pub fn process_instruction<'a>(
         }
         MetadataInstruction::PuffMetadata => {
             msg!("Instruction: Puff Metadata");
-            process_puff_metadata_account(
-                program_id,
-                accounts
-            )
+            process_puff_metadata_account(program_id, accounts)
         }
     }
 }
@@ -192,7 +186,14 @@ pub fn process_update_metadata_accounts(
 
     if let Some(data) = optional_data {
         if metadata.is_mutable {
-            assert_data_valid(&data, update_authority_info.key, &metadata, false)?;
+            assert_data_valid(
+                &data,
+                update_authority_info.key,
+                &metadata,
+                false,
+                update_authority_info.is_signer,
+                true,
+            )?;
             metadata.data = data;
         } else {
             return Err(MetadataError::DataIsImmutable.into());
@@ -498,11 +499,11 @@ pub fn process_mint_new_edition_from_master_edition_via_vault_proxy<'a>(
     let safety_deposit_data = safety_deposit_info.data.borrow();
 
     // Since we're crunching out borsh for CPU units, do type checks this way
-    if vault_data[0] != spl_token_vault::state::Key::VaultV1 as u8 {
+    if vault_data[0] != metaplex_token_vault::state::Key::VaultV1 as u8 {
         return Err(VaultError::DataTypeMismatch.into());
     }
 
-    if safety_deposit_data[0] != spl_token_vault::state::Key::SafetyDepositBoxV1 as u8 {
+    if safety_deposit_data[0] != metaplex_token_vault::state::Key::SafetyDepositBoxV1 as u8 {
         return Err(VaultError::DataTypeMismatch.into());
     }
 
@@ -515,7 +516,7 @@ pub fn process_mint_new_edition_from_master_edition_via_vault_proxy<'a>(
     let owner = get_owner_from_token_account(store_info)?;
 
     let seeds = &[
-        spl_token_vault::state::PREFIX.as_bytes(),
+        metaplex_token_vault::state::PREFIX.as_bytes(),
         token_vault_program_info.key.as_ref(),
         vault_info.key.as_ref(),
     ];
@@ -592,14 +593,14 @@ pub fn process_puff_metadata_account(
     assert_owned_by(metadata_account_info, program_id)?;
 
     puff_out_data_fields(&mut metadata);
+
     let edition_seeds = &[
         PREFIX.as_bytes(),
         program_id.as_ref(),
         metadata.mint.as_ref(),
-        EDITION.as_bytes()
+        EDITION.as_bytes(),
     ];
-    let (_, edition_bump_seed) =
-        Pubkey::find_program_address(edition_seeds, program_id);
+    let (_, edition_bump_seed) = Pubkey::find_program_address(edition_seeds, program_id);
     metadata.edition_nonce = Some(edition_bump_seed);
 
     metadata.serialize(&mut *metadata_account_info.data.borrow_mut())?;

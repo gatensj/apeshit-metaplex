@@ -1,10 +1,8 @@
-use {
-    crate::{error::MetadataError, utils::try_from_slice_checked},
-    borsh::{BorshDeserialize, BorshSerialize},
-    solana_program::{
-        account_info::AccountInfo, entrypoint::ProgramResult, program_error::ProgramError,
-        pubkey::Pubkey,
-    },
+use crate::{error::MetadataError, utils::try_from_slice_checked};
+use borsh::{BorshDeserialize, BorshSerialize};
+use solana_program::{
+    account_info::AccountInfo, entrypoint::ProgramResult, program_error::ProgramError,
+    pubkey::Pubkey,
 };
 /// prefix used for PDAs to avoid certain collision attacks (https://en.wikipedia.org/wiki/Collision_attack#Chosen-prefix_collision_attack)
 pub const PREFIX: &str = "metadata";
@@ -20,10 +18,9 @@ pub const MAX_SYMBOL_LENGTH: usize = 10;
 
 pub const MAX_URI_LENGTH: usize = 200;
 
-pub const MAX_METADATA_LEN: usize = 1
-    + 32
-    + 32
-    + 4
+pub const MAX_METADATA_LEN: usize = 1 + 32 + 32 + MAX_DATA_SIZE + 1 + 1 + 9 + 172;
+
+pub const MAX_DATA_SIZE: usize = 4
     + MAX_NAME_LENGTH
     + 4
     + MAX_SYMBOL_LENGTH
@@ -32,11 +29,7 @@ pub const MAX_METADATA_LEN: usize = 1
     + 2
     + 1
     + 4
-    + MAX_CREATOR_LIMIT * MAX_CREATOR_LEN
-    + 1
-    + 1
-    + 9
-    + 172;
+    + MAX_CREATOR_LIMIT * MAX_CREATOR_LEN;
 
 pub const MAX_EDITION_LEN: usize = 1 + 32 + 8 + 200;
 
@@ -100,7 +93,7 @@ pub struct Metadata {
     // Whether or not the data struct is mutable, default is not
     pub is_mutable: bool,
     /// nonce for easy calculation of editions, if present
-    pub edition_nonce: Option<u8>
+    pub edition_nonce: Option<u8>,
 }
 
 impl Metadata {

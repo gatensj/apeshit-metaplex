@@ -1,14 +1,12 @@
-use {
-    crate::{
-        deprecated_instruction::{MintPrintingTokensViaTokenArgs, SetReservationListArgs},
-        state::{Creator, Data, EDITION, EDITION_MARKER_BIT_SIZE, PREFIX},
-    },
-    borsh::{BorshDeserialize, BorshSerialize},
-    solana_program::{
-        instruction::{AccountMeta, Instruction},
-        pubkey::Pubkey,
-        sysvar,
-    },
+use crate::{
+    deprecated_instruction::{MintPrintingTokensViaTokenArgs, SetReservationListArgs},
+    state::{Creator, Data, EDITION, EDITION_MARKER_BIT_SIZE, PREFIX},
+};
+use borsh::{BorshDeserialize, BorshSerialize};
+use solana_program::{
+    instruction::{AccountMeta, Instruction},
+    pubkey::Pubkey,
+    sysvar,
 };
 
 #[repr(C)]
@@ -144,8 +142,7 @@ pub enum MetadataInstruction {
     ///   7. `[]` Rent info
     DeprecatedCreateReservationList,
 
-    // Sign a piece of metadata that has you as an unverified creator so that it is now verified.
-    //
+    /// Sign a piece of metadata that has you as an unverified creator so that it is now verified.
     ///   0. `[writable]` Metadata (pda of ['metadata', program id, mint id])
     ///   1. `[signer]` Creator
     SignMetadata,
@@ -268,7 +265,7 @@ pub fn create_metadata_accounts(
             AccountMeta::new(metadata_account, false),
             AccountMeta::new_readonly(mint, false),
             AccountMeta::new_readonly(mint_authority, true),
-            AccountMeta::new_readonly(payer, true),
+            AccountMeta::new(payer, true),
             AccountMeta::new_readonly(update_authority, update_authority_is_signer),
             AccountMeta::new_readonly(solana_program::system_program::id(), false),
             AccountMeta::new_readonly(sysvar::rent::id(), false),
@@ -314,18 +311,11 @@ pub fn update_metadata_accounts(
 }
 
 /// puff metadata account instruction
-pub fn puff_metadata_account(
-    program_id: Pubkey,
-    metadata_account: Pubkey,
-) -> Instruction {
+pub fn puff_metadata_account(program_id: Pubkey, metadata_account: Pubkey) -> Instruction {
     Instruction {
         program_id,
-        accounts: vec![
-            AccountMeta::new(metadata_account, false),
-        ],
-        data: MetadataInstruction::PuffMetadata
-        .try_to_vec()
-        .unwrap(),
+        accounts: vec![AccountMeta::new(metadata_account, false)],
+        data: MetadataInstruction::PuffMetadata.try_to_vec().unwrap(),
     }
 }
 
@@ -367,7 +357,7 @@ pub fn create_master_edition(
         AccountMeta::new(mint, false),
         AccountMeta::new_readonly(update_authority, true),
         AccountMeta::new_readonly(mint_authority, true),
-        AccountMeta::new_readonly(payer, true),
+        AccountMeta::new(payer, true),
         AccountMeta::new_readonly(metadata, false),
         AccountMeta::new_readonly(spl_token::id(), false),
         AccountMeta::new_readonly(solana_program::system_program::id(), false),
@@ -438,6 +428,19 @@ pub fn mint_new_edition_from_master_edition_via_token(
         )
         .try_to_vec()
         .unwrap(),
+    }
+}
+
+/// Sign Metadata
+#[allow(clippy::too_many_arguments)]
+pub fn sign_metadata(program_id: Pubkey, metadata: Pubkey, creator: Pubkey) -> Instruction {
+    Instruction {
+        program_id,
+        accounts: vec![
+            AccountMeta::new(metadata, false),
+            AccountMeta::new_readonly(creator, true),
+        ],
+        data: MetadataInstruction::SignMetadata.try_to_vec().unwrap(),
     }
 }
 
