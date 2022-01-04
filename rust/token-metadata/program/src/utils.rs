@@ -861,7 +861,7 @@ pub fn process_create_metadata_accounts_logic(
     let (_, edition_bump_seed) =
         Pubkey::find_program_address(edition_seeds, program_id);
     metadata.edition_nonce = Some(edition_bump_seed);
-    
+
     metadata.serialize(&mut *metadata_account_info.data.borrow_mut())?;
 
     Ok(())

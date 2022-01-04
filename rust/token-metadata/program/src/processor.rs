@@ -592,7 +592,6 @@ pub fn process_puff_metadata_account(
     assert_owned_by(metadata_account_info, program_id)?;
 
     puff_out_data_fields(&mut metadata);
-    
     let edition_seeds = &[
         PREFIX.as_bytes(),
         program_id.as_ref(),

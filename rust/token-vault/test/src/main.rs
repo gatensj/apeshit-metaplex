@@ -49,7 +49,6 @@ fn initialize_vault(app_matches: &ArgMatches, payer: Keypair, client: RpcClient)
     let fraction_treasury = Keypair::new();
     let vault = Keypair::new();
     let allow_further_share_creation = app_matches.is_present("allow_further_share_creation");
-
     let seeds = &[PREFIX.as_bytes(), &program_key.as_ref()];
     let (authority, _) = Pubkey::find_program_address(seeds, &program_key);
 
@@ -241,6 +240,7 @@ fn add_token_to_vault(app_matches: &ArgMatches, payer: Keypair, client: RpcClien
     let clone_of_key = token_mint.pubkey().clone();
     let seeds = &[
         PREFIX.as_bytes(),
+
         &vault_key.as_ref(),
         &clone_of_key.as_ref(),
     ];
@@ -774,6 +774,7 @@ fn withdraw_shares(app_matches: &ArgMatches, payer: Keypair, client: RpcClient) 
         .unwrap();
 
     let mut signers = vec![&payer, &vault_authority];
+
     let seeds = &[PREFIX.as_bytes(), &program_key.as_ref()];
     let (transfer_authority, _) = Pubkey::find_program_address(seeds, &program_key);
 

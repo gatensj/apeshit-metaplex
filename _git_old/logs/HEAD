@@ -1,0 +1,79 @@
+0000000000000000000000000000000000000000 178e72abdd7be0b5852962f4e1d6c8bbea9b2f8f mchl18 <michigerullis92@gmail.com> 1626435024 +0200	clone: from https://github.com/metaplex-foundation/metaplex.git
+178e72abdd7be0b5852962f4e1d6c8bbea9b2f8f 178e72abdd7be0b5852962f4e1d6c8bbea9b2f8f mchl18 <michigerullis92@gmail.com> 1626557805 +0200	reset: moving to HEAD
+178e72abdd7be0b5852962f4e1d6c8bbea9b2f8f 397bf8dbdc652d1341c19934e8ddaa97d8edc64f mchl18 <michigerullis92@gmail.com> 1626557807 +0200	pull: Fast-forward
+397bf8dbdc652d1341c19934e8ddaa97d8edc64f 397bf8dbdc652d1341c19934e8ddaa97d8edc64f mchl18 <michigerullis92@gmail.com> 1626557979 +0200	checkout: moving from master to fix-typo
+397bf8dbdc652d1341c19934e8ddaa97d8edc64f aac32d2d8c3197ac8348470baf588c24971cdf78 mchl18 <michigerullis92@gmail.com> 1626557981 +0200	commit: Fix typo
+aac32d2d8c3197ac8348470baf588c24971cdf78 397bf8dbdc652d1341c19934e8ddaa97d8edc64f mchl18 <michigerullis92@gmail.com> 1626717393 +0200	checkout: moving from fix-typo to master
+397bf8dbdc652d1341c19934e8ddaa97d8edc64f 397bf8dbdc652d1341c19934e8ddaa97d8edc64f Alize <alize_in_cryptoland@protonmail.com> 1626863927 +0200	reset: moving to HEAD
+397bf8dbdc652d1341c19934e8ddaa97d8edc64f bbb05b7e68d26ba17027a1035bb1252c99ad56c2 Alize <alize_in_cryptoland@protonmail.com> 1626863930 +0200	pull: Fast-forward
+bbb05b7e68d26ba17027a1035bb1252c99ad56c2 bbb05b7e68d26ba17027a1035bb1252c99ad56c2 Alize <alize_in_cryptoland@protonmail.com> 1626866979 +0200	checkout: moving from master to create-proper-ass-fork
+bbb05b7e68d26ba17027a1035bb1252c99ad56c2 1475371a2de2d6971b5a8884d7b1f3b02f8f3137 Alize <alize_in_cryptoland@protonmail.com> 1626867014 +0200	commit: Make app run in right repo, update due to deps
+1475371a2de2d6971b5a8884d7b1f3b02f8f3137 921fdab20d03a5d1e48030d0e840471083fabf43 mchl18 <40480041+21e8@users.noreply.github.com> 1627319785 +0200	commit: WIP
+921fdab20d03a5d1e48030d0e840471083fabf43 bbb05b7e68d26ba17027a1035bb1252c99ad56c2 mchl18 <40480041+21e8@users.noreply.github.com> 1627319792 +0200	checkout: moving from create-proper-ass-fork to master
+bbb05b7e68d26ba17027a1035bb1252c99ad56c2 0fc9458163462e41aa4cdbdc924e9b1666f716d4 mchl18 <40480041+21e8@users.noreply.github.com> 1628340229 +0200	pull: Fast-forward
+0fc9458163462e41aa4cdbdc924e9b1666f716d4 0fc9458163462e41aa4cdbdc924e9b1666f716d4 mchl18 <40480041+21e8@users.noreply.github.com> 1628341596 +0200	reset: moving to HEAD
+0fc9458163462e41aa4cdbdc924e9b1666f716d4 0fc9458163462e41aa4cdbdc924e9b1666f716d4 mchl18 <40480041+21e8@users.noreply.github.com> 1628342406 +0200	reset: moving to HEAD
+0fc9458163462e41aa4cdbdc924e9b1666f716d4 921fdab20d03a5d1e48030d0e840471083fabf43 mchl18 <40480041+21e8@users.noreply.github.com> 1628342491 +0200	checkout: moving from master to create-proper-ass-fork
+921fdab20d03a5d1e48030d0e840471083fabf43 0fc9458163462e41aa4cdbdc924e9b1666f716d4 mchl18 <40480041+21e8@users.noreply.github.com> 1628342518 +0200	rebase (start): checkout master
+0fc9458163462e41aa4cdbdc924e9b1666f716d4 921fdab20d03a5d1e48030d0e840471083fabf43 mchl18 <40480041+21e8@users.noreply.github.com> 1628601017 +0200	rebase (abort): updating HEAD
+921fdab20d03a5d1e48030d0e840471083fabf43 0fc9458163462e41aa4cdbdc924e9b1666f716d4 mchl18 <40480041+21e8@users.noreply.github.com> 1628601025 +0200	rebase (start): checkout master
+0fc9458163462e41aa4cdbdc924e9b1666f716d4 12dd5cd9897575e3af8a4097e2d816ba46504798 mchl18 <40480041+21e8@users.noreply.github.com> 1628601070 +0200	commit: Make app run in right repo, update due to deps
+12dd5cd9897575e3af8a4097e2d816ba46504798 a22b72ccaffc8bc011b7452e924a8009e3962e30 mchl18 <40480041+21e8@users.noreply.github.com> 1628601149 +0200	commit: WIP
+a22b72ccaffc8bc011b7452e924a8009e3962e30 a22b72ccaffc8bc011b7452e924a8009e3962e30 mchl18 <40480041+21e8@users.noreply.github.com> 1628601157 +0200	rebase (continue) (finish): returning to refs/heads/create-proper-ass-fork
+a22b72ccaffc8bc011b7452e924a8009e3962e30 17a73d4bd72fd8416812584af79862b49e9bea55 mchl18 <40480041+21e8@users.noreply.github.com> 1628601474 +0200	commit: add some changes
+17a73d4bd72fd8416812584af79862b49e9bea55 eff2f95c2e959f919566480daeb778f608370568 mchl18 <40480041+21e8@users.noreply.github.com> 1628605661 +0200	commit: Changes
+eff2f95c2e959f919566480daeb778f608370568 eff2f95c2e959f919566480daeb778f608370568 mchl18 <40480041+21e8@users.noreply.github.com> 1629804721 +0200	reset: moving to HEAD
+eff2f95c2e959f919566480daeb778f608370568 0fc9458163462e41aa4cdbdc924e9b1666f716d4 mchl18 <40480041+21e8@users.noreply.github.com> 1629804722 +0200	checkout: moving from create-proper-ass-fork to master
+0fc9458163462e41aa4cdbdc924e9b1666f716d4 194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 mchl18 <40480041+21e8@users.noreply.github.com> 1629804743 +0200	pull --progress upstream: Fast-forward
+194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 eff2f95c2e959f919566480daeb778f608370568 mchl18 <40480041+21e8@users.noreply.github.com> 1629806846 +0200	checkout: moving from master to create-proper-ass-fork
+eff2f95c2e959f919566480daeb778f608370568 70e1cdae1fc7e10452ed5fd6b076472e6e6100c8 mchl18 <40480041+21e8@users.noreply.github.com> 1629811127 +0200	commit: Fixes
+70e1cdae1fc7e10452ed5fd6b076472e6e6100c8 194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 mchl18 <40480041+21e8@users.noreply.github.com> 1629811194 +0200	checkout: moving from create-proper-ass-fork to master
+194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 70e1cdae1fc7e10452ed5fd6b076472e6e6100c8 mchl18 <40480041+21e8@users.noreply.github.com> 1629811202 +0200	checkout: moving from master to create-proper-ass-fork
+70e1cdae1fc7e10452ed5fd6b076472e6e6100c8 8377506a1f307c09ef23d1a5e17c079a759fda82 Alice <alize_in_cryptoland@pm.me> 1629814740 +0200	commit (merge): Merge branch 'master' into create-proper-ass-fork
+8377506a1f307c09ef23d1a5e17c079a759fda82 12dd5cd9897575e3af8a4097e2d816ba46504798 Alice <alize_in_cryptoland@pm.me> 1629814785 +0200	rebase (start): checkout HEAD~6
+12dd5cd9897575e3af8a4097e2d816ba46504798 16983cec305bfacd8d5a341b7c23e591e0728e35 Alice <alize_in_cryptoland@pm.me> 1629814785 +0200	rebase (fixup): # This is a combination of 2 commits.
+16983cec305bfacd8d5a341b7c23e591e0728e35 9a9a6ea25335a86282be4ef31cf62ec6bc30b901 Alice <alize_in_cryptoland@pm.me> 1629814786 +0200	rebase (fixup): # This is a combination of 3 commits.
+9a9a6ea25335a86282be4ef31cf62ec6bc30b901 afef6fb24335e23972c8f09c6cac7e96b8f9073e Alice <alize_in_cryptoland@pm.me> 1629814787 +0200	rebase (fixup): # This is a combination of 4 commits.
+afef6fb24335e23972c8f09c6cac7e96b8f9073e bb986167051b209f17e67bd5b8685eabcd07d096 Alice <alize_in_cryptoland@pm.me> 1629814787 +0200	rebase (fixup): Make app run in right repo, update due to deps
+bb986167051b209f17e67bd5b8685eabcd07d096 8377506a1f307c09ef23d1a5e17c079a759fda82 Alice <alize_in_cryptoland@pm.me> 1629814838 +0200	rebase (abort): updating HEAD
+8377506a1f307c09ef23d1a5e17c079a759fda82 8377506a1f307c09ef23d1a5e17c079a759fda82 Alice <alize_in_cryptoland@pm.me> 1629814868 +0200	checkout: moving from create-proper-ass-fork to apply-apeshit
+8377506a1f307c09ef23d1a5e17c079a759fda82 194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 Alice <alize_in_cryptoland@pm.me> 1629814881 +0200	checkout: moving from apply-apeshit to apeshit
+194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 Alice <alize_in_cryptoland@pm.me> 1629814902 +0200	checkout: moving from apeshit to master
+194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 Alice <alize_in_cryptoland@pm.me> 1629814919 +0200	checkout: moving from master to apeshit
+194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 fe621876531863015b11f69361f5d2a6769bdaaa Alice <40480041+21e8@users.noreply.github.com> 1629815102 +0200	commit: Add apeshit changes
+fe621876531863015b11f69361f5d2a6769bdaaa 29f92aed475db2e741bed0b6f3c6717560613640 Alice <40480041+21e8@users.noreply.github.com> 1629815221 +0200	commit: Update index.tsx
+29f92aed475db2e741bed0b6f3c6717560613640 9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 Alice <40480041+21e8@users.noreply.github.com> 1629824317 +0200	commit: Fix metadata
+9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 Alice <40480041+21e8@users.noreply.github.com> 1629824322 +0200	checkout: moving from apeshit to master
+194a82f35ecc5178c9595ea1dbbdc0bdf4ec42b4 9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 Alice <40480041+21e8@users.noreply.github.com> 1629824329 +0200	merge apeshit: Fast-forward
+9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Alice <40480041+21e8@users.noreply.github.com> 1629824526 +0200	commit (merge): Merge branch 'master' of https://github.com/metaplex-foundation/metaplex
+adf3b81b5627075365d048ee76156a3f7e18d6c8 9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 Alice <40480041+21e8@users.noreply.github.com> 1629824646 +0200	checkout: moving from master to apeshit
+9ea6fcfded135cddf8a0b7d28e0fee92da5aedf8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Alice <40480041+21e8@users.noreply.github.com> 1629824651 +0200	merge master: Fast-forward
+adf3b81b5627075365d048ee76156a3f7e18d6c8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Alice <40480041+21e8@users.noreply.github.com> 1629824717 +0200	checkout: moving from apeshit to master
+adf3b81b5627075365d048ee76156a3f7e18d6c8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Alice <40480041+21e8@users.noreply.github.com> 1629824762 +0200	checkout: moving from master to metaplex-foundation-master
+adf3b81b5627075365d048ee76156a3f7e18d6c8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Alice <40480041+21e8@users.noreply.github.com> 1629824772 +0200	checkout: moving from metaplex-foundation-master to master
+adf3b81b5627075365d048ee76156a3f7e18d6c8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Alice <alize_in_cryptoland@protonmail.com> 1629825708 +0200	checkout: moving from master to apeshit
+adf3b81b5627075365d048ee76156a3f7e18d6c8 adf3b81b5627075365d048ee76156a3f7e18d6c8 Michael Gerullis <mgerullis@pm.me> 1629907979 +0200	checkout: moving from apeshit to master
+adf3b81b5627075365d048ee76156a3f7e18d6c8 d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 Michael Gerullis <40480041+21e8@users.noreply.github.com> 1629908042 +0200	commit: Add images
+d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 adf3b81b5627075365d048ee76156a3f7e18d6c8 Michael Gerullis <40480041+21e8@users.noreply.github.com> 1629908049 +0200	checkout: moving from master to apeshit
+adf3b81b5627075365d048ee76156a3f7e18d6c8 d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 Michael Gerullis <40480041+21e8@users.noreply.github.com> 1629908059 +0200	checkout: moving from apeshit to master
+d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 Michael Gerullis <40480041+21e8@users.noreply.github.com> 1629908074 +0200	checkout: moving from master to test
+d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 cd72ffb469d8fcb1e59b80cda5de0393233d55c9 Michael Gerullis <40480041+21e8@users.noreply.github.com> 1629911149 +0200	pull: Fast-forward
+cd72ffb469d8fcb1e59b80cda5de0393233d55c9 5e105c71032122e2e0d03d5493206b540ba0c8e7 Michael Gerullis <40480041+21e8@users.noreply.github.com> 1629911385 +0200	commit: Fix merge issues
+5e105c71032122e2e0d03d5493206b540ba0c8e7 5e105c71032122e2e0d03d5493206b540ba0c8e7 Michael Gerullis <40480041+21e8@users.noreply.github.com> 1629911404 +0200	checkout: moving from test to sync-with-base
+5e105c71032122e2e0d03d5493206b540ba0c8e7 5e105c71032122e2e0d03d5493206b540ba0c8e7 Alice <40480041+21e8@users.noreply.github.com> 1630749225 +0200	reset: moving to HEAD
+5e105c71032122e2e0d03d5493206b540ba0c8e7 5e105c71032122e2e0d03d5493206b540ba0c8e7 Alice <40480041+21e8@users.noreply.github.com> 1630749242 +0200	reset: moving to HEAD
+5e105c71032122e2e0d03d5493206b540ba0c8e7 d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 Alice <40480041+21e8@users.noreply.github.com> 1630749250 +0200	checkout: moving from sync-with-base to master
+d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 Alice <40480041+21e8@users.noreply.github.com> 1630749267 +0200	checkout: moving from master to metaplex-foundation-master
+d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 41fc807d1aa21ccee51c81b813107e362af4e9f8 Alice <40480041+21e8@users.noreply.github.com> 1630749658 +0200	commit (merge): Merge branch 'master' of git://github.com/metaplex-foundation/metaplex into metaplex-foundation-master
+41fc807d1aa21ccee51c81b813107e362af4e9f8 d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 Alice <40480041+21e8@users.noreply.github.com> 1630749668 +0200	checkout: moving from metaplex-foundation-master to master
+d5bf317cf7c4b71c67d40dbc3c355b1c31c27344 70f17fdf110e0b1dfdd0c18e624f4c8ea665272c Alice <40480041+21e8@users.noreply.github.com> 1630749673 +0200	merge metaplex-foundation-master: Merge made by the 'recursive' strategy.
+70f17fdf110e0b1dfdd0c18e624f4c8ea665272c 2a354f1a7d941c398017aa618dedfbbe72ad3448 Alice <40480041+21e8@users.noreply.github.com> 1630749820 +0200	commit (merge): Merge branch 'master' of https://github.com/21e8/metaplex
+2a354f1a7d941c398017aa618dedfbbe72ad3448 85f6e41b98b207ce3b05401a286ce6c92e7713bc Alice <40480041+21e8@users.noreply.github.com> 1630849800 +0200	pull: Fast-forward
+85f6e41b98b207ce3b05401a286ce6c92e7713bc 85f6e41b98b207ce3b05401a286ce6c92e7713bc Alice <40480041+21e8@users.noreply.github.com> 1630849814 +0200	checkout: moving from master to candy-machine-fe
+85f6e41b98b207ce3b05401a286ce6c92e7713bc 0cce95c2cca43e6b084f1883acb0b34897adb8a3 Alice <40480041+21e8@users.noreply.github.com> 1630852653 +0200	commit: Restore main branch
+0cce95c2cca43e6b084f1883acb0b34897adb8a3 0cce95c2cca43e6b084f1883acb0b34897adb8a3 Alice <alize_in_cryptoland@protonmail.com> 1630858162 +0200	checkout: moving from candy-machine-fe to slithers
+0cce95c2cca43e6b084f1883acb0b34897adb8a3 0cce95c2cca43e6b084f1883acb0b34897adb8a3 Alice <alize_in_cryptoland@protonmail.com> 1631016912 +0200	checkout: moving from slithers to candy-machine-fe
+0cce95c2cca43e6b084f1883acb0b34897adb8a3 5ecc1fd044a1ad28eec528888fab5bd56882cc46 Alice <alize_in_cryptoland@protonmail.com> 1631016944 +0200	commit: Remove old stuff
+5ecc1fd044a1ad28eec528888fab5bd56882cc46 0cce95c2cca43e6b084f1883acb0b34897adb8a3 Alice <alize_in_cryptoland@protonmail.com> 1631207563 +0200	checkout: moving from candy-machine-fe to slithers
+0cce95c2cca43e6b084f1883acb0b34897adb8a3 85f6e41b98b207ce3b05401a286ce6c92e7713bc Alice <alize_in_cryptoland@protonmail.com> 1631207566 +0200	checkout: moving from slithers to master
+85f6e41b98b207ce3b05401a286ce6c92e7713bc c1332a16d18fcf8249296808df3f16fb17307ff7 Alice <alize_in_cryptoland@protonmail.com> 1631209332 +0200	commit: fix shit
