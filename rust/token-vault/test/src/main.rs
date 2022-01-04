@@ -16,7 +16,7 @@ use {
         instruction::{approve, initialize_account, initialize_mint, mint_to},
         state::{Account, Mint},
     },
-    spl_token_vault::{
+    metaplex_token_vault::{
         instruction::{
             create_activate_vault_instruction, create_add_shares_instruction,
             create_add_token_to_inactive_vault_instruction, create_combine_vault_instruction,
@@ -49,7 +49,6 @@ fn initialize_vault(app_matches: &ArgMatches, payer: Keypair, client: RpcClient)
     let fraction_treasury = Keypair::new();
     let vault = Keypair::new();
     let allow_further_share_creation = app_matches.is_present("allow_further_share_creation");
-
     let seeds = &[PREFIX.as_bytes(), program_key.as_ref()];
     let (authority, _) = Pubkey::find_program_address(seeds, &program_key);
 

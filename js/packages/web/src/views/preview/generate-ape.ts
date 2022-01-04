@@ -365,7 +365,7 @@ export async function generateApe({
     });
   };
 
-  debugger
+  debugger;
 
   return await mergeImages([
     {
