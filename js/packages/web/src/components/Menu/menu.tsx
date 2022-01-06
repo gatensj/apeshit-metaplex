@@ -22,10 +22,11 @@ export function ApeshitMenu() {
   }
 
   return (
-    <Menu 
-      selectedKeys={selected} 
+    <Menu
+      selectedKeys={selected}
       mode={width <= 768 ? 'vertical' : 'horizontal'}
       style={{margin: '0 auto'}}
+      disabledOverflow={true}
     >
       {menuItems.map((item) =>
         <Menu.Item key={item.link}>
