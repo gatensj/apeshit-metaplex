@@ -11,7 +11,7 @@ Then run:
 You may have to rebuild your package more than one time to secure a
 running environment.
 
-## Known Issues
+## Known Issues 
 
 
 ### Can't find CSS files in common
