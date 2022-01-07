@@ -112,25 +112,6 @@ const VideoArtContent = ({
   })?.[0] as string;
 
   const content =
-    likelyVideo &&
-    likelyVideo.startsWith('https://watch.videodelivery.net/') ? (
-      <div className={`${className} square`}>
-        <Stream
-          streamRef={(e: any) => playerRef(e)}
-          src={likelyVideo.replace('https://watch.videodelivery.net/', '')}
-          loop={true}
-          height={600}
-          width={600}
-          controls={false}
-          videoDimensions={{
-            videoHeight: 700,
-            videoWidth: 400,
-          }}
-          autoplay={true}
-          muted={true}
-        />
-      </div>
-    ) : (
       <video
         className={className}
         playsInline={true}
@@ -154,7 +135,6 @@ const VideoArtContent = ({
             <source src={f.uri} type={f.type} style={style} />
           ))}
       </video>
-    );
 
   return content;
 };
@@ -233,7 +213,7 @@ export const ArtContent = ({
       active={active}
     />
   ) : (
-    <CachedImageContent 
+    <CachedImageContent
       uri={uri}
       className={className}
       preview={preview}
